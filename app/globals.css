@@ -1,26 +1,176 @@
-@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /*Firefox */
+   box-sizing: border-box;
+   overflow-x: hidden;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.landing-page {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.landing-page::-webkit-scrollbar {
+  display: none;
+}
+
+.elevation {
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.44);
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.44);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.44);
+}
+
+.slider-image {
+  margin: 0px 20px;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-image img {
+  width: 70px;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.35));
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.drop-shadow-filter {
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.35));
+}
+
+button img .drop-shadow-filter {
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.65));
+}
+
+button img .no-shadow {
+  filter: none;
+}
+
+.carouselImage {
+  height: 232.69px !important;
+}
+
+.ant-carousel .slick-prev, .ant-carousel .slick-next {
+  display: block !important;
+  background: transparent !important;
+  color: black !important;
+}
+
+.ant-carousel .slick-dots li .slick-active button, .ant-carousel .slick-dots li button {
+  display: none !important;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination .ant-pagination-item-active {
+  background-color: #004F66 !important;
+  border-color: #004F66 !important;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination .ant-pagination-item-active > a {
+  color: #ffffff !important;
+}
+
+.ant-dropdown {
+  z-index: 8000 !important;
+}
+
+.ant-dropdown .ant-dropdown-menu {
+  background-color: #ffffff !important;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-dropdown .ant-dropdown-menu {
+  background-color: #ffffff !important;
+}
+
+.carousel-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+
+@media(min-width: 768px) {
+  .carouselImage {
+    width: 457px !important;
+    height: 375.69px !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media(min-width: 1024px) {
+  .slider-image img {
+    width: 80%;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.35));
+  }
+
+  .slider-image {
+    margin: 0px 44px;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .carouselImage {
+    height: 439.99px !important;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.carousel-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

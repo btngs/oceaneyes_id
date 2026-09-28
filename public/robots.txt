@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://oceaneyes.id/sitemap.xml

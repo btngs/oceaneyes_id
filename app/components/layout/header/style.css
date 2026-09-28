@@ -1,0 +1,45 @@
+ .navbar-animated,
+.navbar-animated *,
+.navbar-animated .ant-typography {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.ant-dropdown .ant-dropdown-menu {
+    width: 150px;
+    background-color: #F6F6F6 !important;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.35));
+}
+
+.oceaneyes-nav-btn {
+    border-bottom: 0px;
+}
+
+.oceaneyes-nav-btn:hover {
+    border-bottom: 2px solid #BA92B3;
+    margin-bottom: -1px;
+}
+
+.oceaneyes-nav-link {
+    color: #F6F6F6;
+}
+
+.oceaneyes-nav-link:active {
+    color: #BA92B3;
+}
+
+.navbar-green {
+    background: #5D7840;
+}
+
+.navbar-white {
+    background: #ffffff;
+}
+
+.navbar-faded {
+    background: rgba(93, 120, 64,0.0);
+}
+
+.navbar-animated {
+    transition-timing-function: ease-in;
+    transition:0.25s;
+}
